@@ -2,31 +2,10 @@
 <html>
 
 <head>
-    <title>first HTML attempt</title>
+    <title>first webpage</title>
     <base href="https://www.example.com">
     <link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8">
-    <style>
-        /* CSS styles here */
-        /*changing background body*/
-        h1{
-            background-color:#D2B48C;
-        }
-        .headers{
-            font-size: 14px ;
-        }
-
-        .colors{
-            background-color:#d28ca6;
-
-        }
-
-        #title{
-            background-color:#8c92d2;
-        }
-
-
-    </style>
     <script>
         // JavaScript code here
     </script>
@@ -34,24 +13,63 @@
 </head>
 
 <body>
+    <!-- this is the header where title and navigation bar goes -->
     <header>
-        <h1 id="title">Jupiter</h1>
-        <nav>
-            <ul>
-                <li><a href="#section1">Introduction</a></li>
-                <li><a href="#section2">About Jupiter</a></li>
-                <li><a href="#section3">Quick facts</a></li>
-            </ul>
+        <h1>The Solar System</h1>
+        <nav> <!--since we have 4 sections we need 4 navigation links-->
+            <a href="#themilkyway" class="link"> <img src="" alt=""> The Milky Way</a> <!--when we don't want the link to change the path we're at or take us to another page we use # at the beginning,to stay in the same path-->
+            <a href="#thesolarsystem" class="link">  The Solar System  </a>
+            <a href="#thesun" class="link">  The Sun  </a>
+            <a href="#mercury" class="link">  Mercury  </a>
+            <a href="#venus" class="link"> Venus </a>
+            <a href="#earth" class="link"> Earth </a>
+            <a href="#mars" class="link"> Mars </a>
+            <a href="#jupiter" class="link"> Jupiter </a>
+            <a href="#saturn" class="link"> Saturn </a>
+            <a href="#uranus" class="link"> Uranus </a>
+            <a href="#neptune" class="link"> Neptune </a>
+            <a href="#pluto" class="link"> Pluto </a>
         </nav>
+
+        <style>
+            header{
+                background-color: rgb(130, 153, 215);
+                font-family:Georgia, 'Times New Roman', Times, serif;
+            }
+            .link{
+                color: black;
+                font-style: italic;
+                
+            }
+
+        </style>
     </header>
 
     <main>
         <article>
-            <section id="section1">
-                <h2 class="headers">Introduction</h2>
-                <p>
-                    Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass more than two and a half times that of all the other planets in the Solar System combined, and slightly less than one one-thousandth the mass of the Sun.
-                </p>
+            <section id="themilkyway">
+                <h2 class="headers">The Milky Way</h2>
+                <ol>
+                    <li>Its Structure
+                        <ul>
+                            <li>Disk: The Milky Way has a flattened, rotating disk with a central bar. The Sun is located in one of the spiral arms, about 27,000 light-years from the galactic center.</li>
+                            <li>Bulge: At the center of the galaxy, there's a dense, spherical region known as the bulge, which contains older stars.</li>
+                            <li>Halo: Surrounding the disk is a halo, which consists of older stars and globular clusters. The halo also likely contains a significant amount of dark matter.</li>
+                        </ul>
+                    </li>
+
+                    <li>Size and Scale:
+                        <ul>
+                        <li>
+                            The Milky Way is vast, with a diameter of about 100,000 light-years and containing billions of stars.
+                        </li>
+                        <li>
+                            Its mass is estimated to be around 100 billion times that of the Sun.                     
+                        </li>
+                        </ul>
+                    </li>
+
+                </ol>
                 
             </section>
 

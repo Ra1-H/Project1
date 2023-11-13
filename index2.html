@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My personal web page</title>
+</head>
+
+<body>
+    <header> <!--nav bar needed in header-->
+        <nav> <!--since we have 4 sections we need 4 navigation links-->
+            <a href="#portfolio"> <img src="" alt="">  Portfolio  </a> <!--when we don't want the link to change the path we're at or take us to another page we use # at the beginning,to stay in the same path-->
+            <a href="#reviews">  Reviews  </a>
+            <a href="#prices">  Prices  </a>
+            <a href="#about_me">  About me  </a>
+            <a href="#contact">  Contact  </a>
+        </nav>
+
+
+    </header> 
+
+
+    <section id="portfolio" class="flex_horizontal"> <!--4 div tags for 4 projects-->
+        <div class="project" id="project1">Project 1</div>
+        <div class="project" id="project2">Project 2</div>
+        <div class="project" id="project3">Project 3</div>
+        <div class="project" id="project4">Project 4</div>
+        
+        <style>
+            .project{
+                width: 200px;
+                height: 200px;
+                background: rgb(96, 41, 147) ;
+                margin: 10px;
+            }
+
+            body{
+                background:rgb(220, 139, 220);
+            }
+
+            .flex_horizontal{
+                display: flex; /*meaning i'm using flexbox as CSS element*/
+                flex-direction: row ;
+                flex-wrap: wrap;
+            }
+
+            
+        </style>
+
+    </section>
+
+
+    <section id="reviews">Reviews</section>
+
+
+    <section id="prices">Prices</section>
+
+
+    <section id="about_me">About me</section>
+
+
+    <section id="contact">Contact</section>
+
+    <footer>Footer</footer>
+
+
+
+   
+    
+
+</body>
+
+</html>
