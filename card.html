@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card component</title>
+</head>
+<body>
+    <style>
+        .card{
+            height:300px ;
+            width:500px ;
+            border-radius:40px;
+            overflow: hidden;   /* anything outside the card will be hidden */
+            /* border:1px solid red; for testing */
+            position:relative;
+
+        }
+        
+
+        .layer1{
+            position:absolute;
+        }
+        
+        .house{
+            height:300px ;
+            width:500px ;
+
+        }
+
+        .layer2{
+            position: absolute;
+            left: 0px;
+            bottom:0px;
+            padding:30px;
+        }
+
+        button{
+            height:50px ;
+            width:100px ;
+            border-radius:30px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size:small;
+
+        }
+
+        .title{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size:large;
+        }
+        
+        body{
+            display:flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap:30px;
+        }
+        
+    </style>
+
+    <!-- creating a card in which we'll have 2 layers -->
+    <!-- the back layer will be an image -->
+    <!-- the front layer will be an overlay text -->
+    <div class="card">
+        <div class="layer1">
+           <img src="images/house1.png" alt="house1" class="house"> 
+        </div>
+        <div class="layer2">
+            <h1 class="title">Triangular house</h1>
+            <button class="viewmore">View more</button>
+        </div>
+
+        
+    </div>
+
+    <div class="card">
+        <div class="layer1">
+           <img src="images/house2.png" alt="house2" class="house"> 
+        </div>
+        <div class="layer2">
+            <h1 class="title">White house</h1>
+            <button class="viewmore">View more</button>
+        </div>
+
+        
+    </div>
+
+    <div class="card">
+        <div class="layer1">
+           <img src="images/house3.png" alt="house3" class="house"> 
+        </div>
+        <div class="layer2">
+            <h1 class="title">Light house</h1>
+            <button class="viewmore">View more</button>
+        </div>
+
+        
+    </div>
+    
+    <div class="card">
+        <div class="layer1">
+           <img src="images/house4.png" alt="house4" class="house"> 
+        </div>
+        <div class="layer2">
+            <h1 class="title">Light house</h1>
+            <button class="viewmore">View more</button>
+        </div>
+
+        
+    </div>
+    
+    <div class="card">
+        <div class="layer1">
+           <img src="images/house5.png" alt="house5" class="house"> 
+        </div>
+        <div class="layer2">
+            <h1 class="title">Light house</h1>
+            <button class="viewmore">View more</button>
+        </div>
+
+        
+    </div>
+    
+    <div class="card">
+        <div class="layer1">
+           <img src="images/house6.png" alt="house6" class="house"> 
+        </div>
+        <div class="layer2">
+            <h1 class="title">Light house</h1>
+            <button class="viewmore">View more</button>
+        </div>
+
+        
+    </div>
+    
+    
+</body>
+</html>
