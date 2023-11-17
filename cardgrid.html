@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            padding: 40px;
+        }
+
+        #mainsection {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            justify-content: center;
+            align-content: center;
+        }
+
+        .card {
+            margin-top: 30px;
+            height: 300px;
+            width: 300px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px black;
+            /* Add a subtle box shadow */
+            /* anything outside the card will be hidden */
+            /* border:1px solid red; */
+            position: relative;
+
+
+        }
+
+        .card--dark {
+            background-color: #333333;
+            /* Override background color to dark gray (#333333) */
+            box-shadow: 0 4px 8px rgba(255, 0, 0, 0.5);
+            /* Change box-shadow color to red tone */
+        }
+
+
+        .layer1 {
+            position: absolute;
+        }
+
+        .house {
+            height: 300px;
+            width: 100%;
+            pointer-events: none;
+
+        }
+
+        .layer2 {
+            position: absolute;
+            left: 0px;
+            bottom: 0px;
+            padding: 16px;
+            /*.card__content: all around padding of 16 pixels */
+            margin-bottom: 8px;
+
+        }
+
+        button {
+            height: 50px;
+            width: 100px;
+            border-radius: 30px;
+            font: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            background-color: #2e99c3;
+            padding: 8px 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #a9d4e4;
+            /* Change background color on hover */
+        }
+
+        .title {
+            font: 18px;
+            font-weight: bold;
+            color: rgb(2, 3, 3);
+            position: relative;
+            margin-bottom: 16px;
+
+        }
+
+        .title::after {
+            content: attr(title);
+            /* Set the content to the title attribute */
+            position: absolute;
+            width: 140px;
+            opacity: 0;
+            /* Hidden by default */
+            /* Add any additional needed styles here */
+        }
+
+        /* Show Tooltip on Hover */
+        .title:hover::after {
+            opacity: 1;
+            /* Make the tooltip visible on hover */
+        }
+    </style>
+    <section id="mainsection">
+        <!-- creating a card in which we'll have 2 layers -->
+        <!-- the back layer will be an image -->
+        <!-- the front layer will be an overlay text -->
+        <div class="card card--dark">
+            <div class="layer1">
+                <img src="images/house1.png" alt="house1" class="house">
+            </div>
+            <div class="layer2">
+                <h1 class="title">Triangular house</h1>
+                <button class="viewmore">View more</button>
+            </div>
+
+
+        </div>
+
+        <div class="card card--dark">
+            <div class="layer1">
+                <img src="images/house2.png" alt="house2" class="house">
+            </div>
+            <div class="layer2">
+                <h1 class="title">White house</h1>
+                <button class="viewmore">View more</button>
+            </div>
+
+
+        </div>
+
+        <div class="card card--dark">
+            <div class="layer1">
+                <img src="images/house3.png" alt="house3" class="house">
+            </div>
+            <div class="layer2">
+                <h1 class="title">Light house</h1>
+                <button class="viewmore">View more</button>
+            </div>
+
+
+        </div>
+
+        <div class="card card--dark">
+            <div class="layer1">
+                <img src="images/house4.png" alt="house4" class="house">
+            </div>
+            <div class="layer2">
+                <h1 class="title">Light house</h1>
+                <button class="viewmore">View more</button>
+            </div>
+
+
+        </div>
+
+        <div class="card card--dark">
+            <div class="layer1">
+                <img src="images/house5.png" alt="house5" class="house">
+            </div>
+            <div class="layer2">
+                <h1 class="title">Light house</h1>
+                <button class="viewmore">View more</button>
+            </div>
+
+
+        </div>
+
+        <div class="card card--dark">
+            <div class="layer1">
+                <img src="images/house6.png" alt="house6" class="house">
+            </div>
+            <div class="layer2">
+                <h1 class="title">Light house</h1>
+                <button class="viewmore">View more</button>
+            </div>
+
+        </div>
+
+    </section>
+</body>
+
+</html>

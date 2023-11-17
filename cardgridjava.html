@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card component</title>
+
+
+    <style>
+        body {
+            height: 100vh;
+            /* display: grid;
+            align-items: center; */
+            padding: 40px;
+            
+        }
+
+
+        #cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            justify-items: center;
+            justify-content: center;
+            align-content: center;
+        }
+
+        .card {
+            margin-top: 30px;
+            height: auto;
+            width: 300px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 4px 4px 8px black;
+            position: relative;
+
+
+
+        }
+
+
+
+        .card__button {
+            text-decoration: none;
+            /* Remove text decoration */
+            background-color: #4caf50;
+            /* Set background color to hex '4caf50' */
+            padding: 8px 16px;
+            /* Vertical padding: 8px, Horizontal padding: 16px */
+            transition: background-color 0.3s ease;
+            /* Add transition effect to background color */
+        }
+
+        /* Hover Effect */
+        .card__button:hover {
+            background-color: #45a049;
+            /* Change background color on hover to hex '45a049' */
+        }
+
+
+        .card--dark {
+            background-color: #333333;
+            color: #cccccc;
+            /* Set text color to hex 'cccccc' for the dark theme */
+        }
+
+        /* Dark Card Button Styles */
+        .card--dark .card__button {
+            background-color: #1e824c;
+            /* Set background color to hex '1e824c' */
+        }
+
+        /* Hover Effect for Dark Card Button */
+        .card--dark .card__button:hover {
+            background-color: #1a6c3d;
+            /* Change background color on hover to hex '1a6c3d' */
+        }
+
+
+
+
+        .card__header {
+            display: flexbox;
+            justify-content: space-between;
+            align-content: space-between;
+            padding: 8px 16px;
+        }
+
+        .card__image {
+            width: 100%;
+            /* Set width to 100% of the parent/closest relative element */
+            height: auto;
+            /* Maintain aspect ratio by setting height to auto */
+            pointer-events: none;
+        }
+
+        .card__content {
+            padding: 16px;
+        }
+
+        .card__title {
+            font-size: 18px;
+            /* Set font size to 18 pixels */
+            font-weight: bold;
+            /* Make the font bold */
+            margin: 8px;
+            /* Add a margin of 8 pixels on the bottom */
+            position: relative;
+            /* Position the element as relative for the tooltip */
+        }
+
+        .card__title::after {
+            content: "/ " attr(title);
+            /* Set content as the title attribute */
+            position: absolute;
+            width: 140px;
+            opacity: 0;
+            /* Keep it hidden by default */
+            /* Add any additional needed styles for the tooltip */
+        }
+
+        .card__title:hover::after {
+            opacity: 1;
+            /* Set opacity to 1 on hover to show the tooltip */
+            /* Add any additional styles for the tooltip on hover */
+        }
+
+        .card__text {
+            font-size: 14px;
+            /* Set font size to 14 pixels */
+            color: #666666;
+            /* Set text color to hex '666666' */
+            margin-bottom: 16px;
+            /* Add a bottom margin of 16 pixels */
+        }
+
+        .card__price {
+            font-size: 16px;
+            /* Set font size to 16 pixels */
+            margin: 8px;
+            /* Add a top margin of 8 pixels */
+            font-weight: bold;
+            /* Set font weight to bold */
+        }
+
+
+
+
+       
+    </style>
+
+
+
+
+</head>
+
+
+
+
+<body>
+
+
+    <div id="cards-grid">
+
+        <!-- <div class="card card--dark ">
+            <img class="card__image " src="images/house1.png" alt="house1">
+            <span class="card__header ">
+                <h2 class="card__title " title=" hover title "> card title </h2>
+                <p class="card__price"> 19.9$ per month </p>
+            </span>
+            <div class="card__content">
+                <p class="card__text">second paragraph</p>
+                <a class="card__button">Read More</a>
+            </div> 
+
+        </div>
+
+        <div class="card card--dark ">
+            <img class="card__image " src="images/house1.png" alt="house1">
+            <span class="card__header ">
+                <h2 class="card__title " title=" hover title "> card title </h2>
+                <p class="card__price"> 19.9$ per month </p>
+            </span>
+            <div class="card__content">
+                <p class="card__text">second paragraph</p>
+                <a class="card__button">Read More</a>
+            </div> 
+
+        </div>
+        <div class="card card--dark ">
+            <img class="card__image " src="images/house1.png" alt="house1">
+            <span class="card__header ">
+                <h2 class="card__title " title=" hover title "> card title </h2>
+                <p class="card__price"> 19.9$ per month </p>
+            </span>
+            <div class="card__content">
+                <p class="card__text">second paragraph</p>
+                <a class="card__button">Read More</a>
+            </div> 
+
+        </div>
+        <div class="card card--dark ">
+            <img class="card__image " src="images/house1.png" alt="house1">
+            <span class="card__header ">
+                <h2 class="card__title " title=" hover title "> card title </h2>
+                <p class="card__price"> 19.9$ per month </p>
+            </span>
+            <div class="card__content">
+                <p class="card__text">second paragraph</p>
+                <a class="card__button">Read More</a>
+            </div> 
+
+        </div>
+        <div class="card card--dark ">
+            <img class="card__image " src="images/house1.png" alt="house1">
+            <span class="card__header ">
+                <h2 class="card__title " title=" hover title "> card title </h2>
+                <p class="card__price"> 19.9$ per month </p>
+            </span>
+            <div class="card__content">
+                <p class="card__text">second paragraph</p>
+                <a class="card__button">Read More</a>
+            </div> 
+
+        </div> -->
+
+    </div>
+
+    <script>
+        const cardsGrid = document.querySelector('#cards-grid'); //reference to the element with id="cards-grid"
+        const numberOfCards = 20;
+        for (let i = 0; i < numberOfCards; i++) {
+            let card = document.createElement("div");
+            card.className="card";
+            
+
+            let cardImage=document.createElement('img');
+            cardImage.className="card__image ";
+            cardImage.src="images/house1.png";
+
+            let cardHeader = document.createElement('span');
+            cardHeader.className="card__header";
+
+            let cardTitle = document.createElement('h2');
+            cardTitle.title = `Card Title ${i + 1}`;
+            cardTitle.className="card__title";
+            cardTitle.textContent = `Card Title ${i + 1}`;
+
+            let cardPrice=document.createElement('p');
+            cardPrice.className="card__price";
+            cardPrice.textContent = `$${(i + 1) * 10}`;
+
+            let cardContent = document.createElement("div");
+            cardContent.className="card__content";
+
+            let contentText=document.createElement('p');
+            contentText.className="card__text";
+            contentText.textContent = "second paragraph"
+
+            let readMoreLink = document.createElement('a');
+            readMoreLink.className = 'card__button';
+            readMoreLink.textContent = 'Read More';
+
+            
+            // Append elements to the card header
+            cardHeader.appendChild(cardPrice)
+            cardHeader.appendChild(cardTitle)
+            
+            // Append elements to the card content
+            cardContent.appendChild(contentText);
+            cardContent.appendChild(readMoreLink);
+
+            // Append the card content to the card
+            card.appendChild(cardImage)
+            card.appendChild(cardHeader)
+            card.appendChild(cardContent)
+            
+            
+            // Append the card to the container
+            cardsGrid.appendChild(card);
+
+
+        }
+
+
+    </script> 
+
+
+    <!-- <script>
+    //     //get the html reference of the 1st card
+    //     let firstCard=document.querySelector(".card")
+    //     //defining a new function
+    //     function alertHello(){alert("hello")}
+    //     //ataching an event to this reference and give it a logic
+    //     firstCard.addEventListener("click",alertHello)
+
+    //     //once this action has been done by the user,and the event is done,we will print this on the console on the DT
+
+
+    //     console.log("user has clicked the first card")
+
+    // </script>  -->
+</body>
+
+</html>
