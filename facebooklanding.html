@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+
+        }
+
+        body{
+            display:flex;
+            flex-direction: column;
+        }
+
+        main{
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height:75vh;
+            background-color: #dddfe2;
+        }
+
+        #form{
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            
+        }
+        
+        .form__title{
+            margin:20px;
+            font-family: sans-serif; 
+            /* font-weight: bold;
+            font-size: xx-large;
+            color:rgb(36, 36, 153); */    
+        }
+        .title__img{
+            width:240px;
+            height:79px;
+        }
+
+        
+
+        .form__body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color:white;
+            height:400px;
+            width:400px;
+            box-shadow: 4px 4px 8px rgba(0, 0, 0, .1);
+            border-radius:8px;
+            padding: 10px;
+            gap:20px;
+
+        }
+        .header{
+            margin:8px;
+            font-size: 18px;
+            font-family: Arial, Helvetica, sans-serif;
+            text-decoration-color: black;
+        }
+
+        .inputs{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap:10px;
+        }
+
+        .username{
+            border-radius:8px;
+            height: 50px;
+            width:350px;
+            border: 1px solid #dddfe2;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 12px;
+            padding:5px;
+
+
+        }
+        .password{
+            border-radius:8px;
+            height: 50px;
+            width:350px;
+            border: 1px solid #dddfe2;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 12px;
+            padding:5px;
+
+        }
+
+        .button{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius:8px;
+            height:40px;
+            width:350px;
+            background-color: #1877f2;
+            font-family:Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            color: white;
+            font-weight:bold;
+        }
+
+        .help{
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        .forgotten-pass{
+            text-decoration: none;
+            color:#1877f2;
+        }
+        .sign-up{
+            text-decoration: none;
+            color:#1877f2;
+        }
+
+
+        footer{
+            display: flex;
+            flex-direction: column;
+            gap:30px
+    
+        }
+
+        .languages ul{
+            list-style:none;
+            display:flex;
+            flex-direction: row;
+            gap:5px;
+        }
+
+        .optional-links ul{
+            list-style:none;
+            display:flex;
+            flex-direction: row;
+            gap:5px;
+
+        }
+
+        .footer-font{
+            text-decoration: none;
+            font-family:inherit;
+            font-size: 12px;
+            color: grey;
+            font-weight:50;
+            
+        }
+
+        .hr-line{
+            border: 1px solid #dddfe2;
+            font-size: 1px;
+            height: 2px;
+            
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <main> <!-- it's the form container -->
+        <div id="form">
+            <div class="from__title"> <img class="title__img" src="https://static.xx.fbcdn.net/rsrc.php/y1/r/4lCu2zih0ca.svg" alt="facebook"> </div>
+            <div class="form__body">
+                <h1 class="header"> Log in to facebook </h1>
+                
+                <div class="inputs">
+                    <input type="text" class="username" placeholder="Enter address or phone number">
+                    <input type="password" class="password" placeholder="Password">
+                </div>
+                
+                <div class="button"> Log in </div>
+                
+                <div class="help">
+                    <ul>
+                        <a href="#" class="forgotten-pass">Forgotten password?</a>
+                        <a href="#" class="sign-up">Create new account</a>
+                    </ul>
+                     
+
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="languages">
+            <ul >
+                <li><a class="footer-font" href="#">English</a></li>
+                <li><a class="footer-font" href="#">English</a></li>
+                <li><a class="footer-font" href="#">English</a></li>
+                <li><a class="footer-font" href="#">English</a></li>
+                <li><a class="footer-font" href="#">English</a></li>
+            </ul>
+        </div>
+
+        <div class="hr-line"></div>
+
+        <div class="optional-links">
+            <ul>
+                <li><a class="footer-font" href="#">sign in</a></li>
+                <li><a class="footer-font" href="#">sign in</a></li>
+                <li><a class="footer-font" href="#">sign in</a></li>
+                <li><a class="footer-font" href="#">sign in</a></li>
+                <li><a class="footer-font" href="#">sign in</a></li>
+            </ul>
+
+        </div>
+        <div class="copy-rights"></div>
+    </footer>
+</body>
+</html>
